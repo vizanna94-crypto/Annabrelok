@@ -35,16 +35,6 @@ p{margin:0}.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;
 .cta:after{content:"";position:absolute;inset:-30%;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.38) 50%,transparent 60%);transform:translateX(-80%);animation:sheen 4.5s infinite}
 @keyframes sheen{45%,100%{transform:translateX(80%)}}
 .cta:hover{transform:translateY(-4px);box-shadow:0 22px 45px rgba(113,92,176,.35)}
-.cta.secondary {
-    background: rgba(255,255,255,.8);
-    color: #62547f;
-    box-shadow: 0 8px 25px rgba(67,57,91,.1);
-    border: 1px solid var(--line);
-}
-.cta.secondary:hover {
-    background: #ffffff;
-    box-shadow: 0 16px 35px rgba(113,92,176,.15);
-}
 .hero-photo{position:relative;min-height:610px;display:flex;align-items:center;justify-content:center}
 .hero-photo .halo{position:absolute;width:530px;height:530px;border-radius:50%;background:radial-gradient(circle,rgba(167,145,232,.35),rgba(158,187,232,.15) 45%,transparent 70%);animation:pulse 6s ease-in-out infinite}
 @keyframes pulse{50%{transform:scale(1.08);opacity:.75}}
@@ -52,132 +42,222 @@ p{margin:0}.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;
 @keyframes float{50%{transform:rotate(-1deg) translateY(-12px)}}
 .photo-frame img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:19px}
 .photo-caption{position:absolute;left:-28px;bottom:35px;background:rgba(255,255,255,.88);backdrop-filter:blur(15px);padding:15px 19px;border-radius:16px;box-shadow:0 15px 40px rgba(70,54,120,.15);font-family:"Cormorant Garamond";font-size:23px}
-.package-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 30px;
-    text-align: center;
-}
-.package-item .icon {
-    font-size: 40px;
-    margin-bottom: 15px;
-    display: inline-block;
-    background: linear-gradient(135deg, #9c8bdc, #7189b3);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-}
-.package-item h3 {
-    font-size: 26px;
-    margin-bottom: 10px;
-}
-.package-item p {
-    color: var(--muted);
-    font-size: 15px;
-}
-.directions {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
-}
-.direction-card {
-    background: rgba(255,255,255,.66);
-    border: 1px solid var(--line);
-    border-radius: 30px;
-    padding: 30px;
-    text-align: center;
-    box-shadow: var(--shadow);
-    transition: .45s;
-}
-.direction-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 32px 80px rgba(73,55,125,.22);
-}
-.direction-card .icon {
-    font-size: 36px;
-    margin-bottom: 15px;
-}
-.direction-card h3 {
-    font-size: 26px;
-}
-.pricing-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 30px;
-    max-width: 900px;
-    margin: 50px auto 0;
-}
-.price-card {
-    background: rgba(255,255,255,.72);
-    border: 1px solid rgba(113,95,165,.2);
-    border-radius: 34px;
-    padding: 40px;
-    box-shadow: var(--shadow);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-}
-.price-card:before {
-    content: "";
-    position: absolute;
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    right: -100px;
-    top: -100px;
-    background: rgba(163,145,228,.22);
-    filter: blur(5px);
-}
+.package-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; text-align: center; }
+.package-item .icon { font-size: 40px; margin-bottom: 15px; display: inline-block; background: linear-gradient(135deg, #9c8bdc, #7189b3); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.package-item h3 { font-size: 26px; margin-bottom: 10px; }
+.package-item p { color: var(--muted); font-size: 15px; }
+.directions { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+.direction-card { background: rgba(255,255,255,.66); border: 1px solid var(--line); border-radius: 30px; padding: 30px; text-align: center; box-shadow: var(--shadow); transition: .45s; }
+.direction-card:hover { transform: translateY(-10px); box-shadow: 0 32px 80px rgba(73,55,125,.22); }
+.direction-card .icon { font-size: 36px; margin-bottom: 15px; }
+.direction-card h3 { font-size: 26px; }
+.pricing-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; max-width: 900px; margin: 50px auto 0; }
+.price-card { background: rgba(255,255,255,.72); border: 1px solid rgba(113,95,165,.2); border-radius: 34px; padding: 40px; box-shadow: var(--shadow); position: relative; overflow: hidden; display: flex; flex-direction: column; text-align: center; }
+.price-card:before { content: ""; position: absolute; width: 260px; height: 260px; border-radius: 50%; right: -100px; top: -100px; background: rgba(163,145,228,.22); filter: blur(5px); }
 .price-card h3 { font-size: 34px; margin-bottom: 10px; }
-.price-card .price {
-    font-family: "Cormorant Garamond";
-    font-size: 58px;
-    color: #62509c;
-    margin: 10px 0;
-    font-weight: 600;
-}
+.price-card .price { font-family: "Cormorant Garamond"; font-size: 58px; color: #62509c; margin: 10px 0; font-weight: 600; }
 .price-card .price-sub { color: var(--muted); margin-bottom: 25px; }
-.price-card ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: left;
-    flex-grow: 1;
-}
-.price-card li {
-    padding: 12px 0;
-    border-bottom: 1px solid var(--line);
-    color: #5d5673;
-    display: flex;
-    align-items: flex-start;
-}
-.price-card li:before {
-    content: '✓';
-    color: var(--accent-2);
-    margin-right: 12px;
-    font-weight: bold;
-    flex-shrink: 0;
-}
-.price-card .cta {
-    margin-top: 30px;
-    align-self: center;
-}
-.price-card.premium {
-    border-color: var(--accent-2);
-}
-.expert-section {
-    background: rgba(255,255,255,.45);
-}
-.expert-grid {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 60px;
-    align-items: center;
-}
-.expert-image img {
-    width: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    border
+.price-card ul { list-style: none; padding: 0; margin: 0; text-align: left; flex-grow: 1; }
+.price-card li { padding: 12px 0; border-bottom: 1px solid var(--line); color: #5d5673; display: flex; align-items: flex-start; }
+.price-card li:before { content: '✓'; color: var(--accent-2); margin-right: 12px; font-weight: bold; flex-shrink: 0; }
+.price-card .cta { margin-top: 30px; align-self: center; }
+.price-card.premium { border-color: var(--accent-2); }
+.expert-section { background: rgba(255,255,255,.45); }
+.expert-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 60px; align-items: center; }
+.expert-image img { width: 100%; max-height: 500px; object-fit: cover; border-radius: 30px; box-shadow: var(--shadow); }
+.expert-copy h2 { text-align: left; font-size: clamp(36px, 5vw, 56px); margin-bottom: 20px; }
+.expert-copy p { color: var(--muted); font-size: 17px; margin-top: 20px; }
+.faq { max-width: 820px; margin: auto; }
+details { background: rgba(255,255,255,.65); border: 1px solid var(--line); border-radius: 18px; margin: 10px 0; padding: 10px 22px; transition: .3s; }
+details[open] { padding-bottom: 20px; }
+summary { cursor: pointer; font-family: "Cormorant Garamond"; font-size: 25px; color: #45396d; padding: 10px 0; list-style: none; }
+summary::-webkit-details-marker { display: none; }
+summary::after { content: '+'; float: right; font-family: Manrope, sans-serif; font-size: 24px; font-weight: 400; transition: transform .3s; }
+details[open] > summary::after { transform: rotate(45deg); }
+details p { color: var(--muted); font-size: 14px; padding-top: 0; }
+.final { padding: 120px 0; text-align: center; }
+.final h2 { max-width: 780px; margin: auto; }
+.final p { color: var(--muted); max-width: 600px; margin: 20px auto 0; }
+footer { padding: 35px 0 50px; border-top: 1px solid var(--line); color: #77708c; font-size: 12px; }
+.footer-row { display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap; }
+.reveal { opacity: 0; transform: translateY(35px); transition: opacity .8s ease, transform .8s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+.delay1 { transition-delay: .1s; } .delay2 { transition-delay: .2s; } .delay3 { transition-delay: .3s; } .delay4 { transition-delay: .4s; }
+@media(max-width: 1024px) { .directions { grid-template-columns: repeat(2, 1fr); } .expert-grid { grid-template-columns: 1fr; gap: 40px; } .expert-copy h2, .expert-copy p { text-align: center; } .expert-image { text-align: center; } .expert-image img { max-width: 400px; } }
+@media(max-width: 900px) { .hero-grid { grid-template-columns: 1fr; gap: 35px; } .hero { min-height: auto; padding-top: 70px; } .hero-photo { min-height: 530px; } .price-grid { grid-template-columns: 1fr; } }
+@media(max-width: 650px) { section { padding: 75px 0; } .container { width: min(100% - 24px, 1160px); } h1 { font-size: 51px; } h2 { font-size: 44px; } .hero-photo { min-height: 470px; } .photo-caption { left: 4px; bottom: 22px; } .price-card { padding: 30px 20px; } .directions { grid-template-columns: 1fr; } .hero-note { align-items: flex-start; } }
+@media(prefers-reduced-motion:reduce) { *, *:before, *:after { animation: none !important; transition: none !important; } }
+</style></head>
+<body>
+<header class="hero">
+    <div class="container hero-grid">
+        <div class="hero-copy reveal">
+            <div class="kicker">AnnaStory · ручная работа</div>
+            <h1>Талисман, который <em>создаётся для тебя</em></h1>
+            <p class="lead">Эстетичный и смысловой подарок. Вы выбираете направление — я подбираю сочетание и собираю ваш личный брелок-талисман вручную после заказа.</p>
+            <a class="cta" href="https://vk.ru/annarazbor" target="_blank" rel="noopener">Создать свой талисман</a>
+            <div class="hero-note"><i class="dot"></i><span>Не массовое производство · каждый талисман собирается индивидуально</span></div>
+        </div>
+        <div class="hero-photo reveal delay1">
+            <div class="halo"></div>
+            <div class="photo-frame">
+                <img src="https://images.unsplash.com/photo-1595846519845-68e298c2edd8?q=80&w=1000&auto=format&fit=crop" alt="Талисман в подарочной упаковке">
+                <div class="photo-caption">сделано вручную · с заботой</div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<section class="intro">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="kicker">Идеальный подарок</div>
+            <h2>Что входит в комплект</h2>
+            <p>Это не просто аккуратный брелок, а твой личный программный талисман — материальный якорь, настроенный на нужные цели и внутренний настрой.</p>
+        </div>
+        <div class="package-grid">
+            <div class="package-item reveal delay1">
+                <span class="icon">🔮</span>
+                <h3>Программный талисман</h3>
+                <p>Брелок ручной работы из стеклянных бусин и прочной фурнитуры.</p>
+            </div>
+            <div class="package-item reveal delay2">
+                <span class="icon">🎁</span>
+                <h3>Подарочная упаковка</h3>
+                <p>Белая коробочка, красная бумага тишью, открытка и бечевка — готовое решение для подарка.</p>
+            </div>
+            <div class="package-item reveal delay3">
+                <span class="icon">🎴</span>
+                <h3>Интерактивная карточка</h3>
+                <p>Внутри ждет цифровое послание и персональное предсказание.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="directions-section">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="kicker">Подбор под ваш запрос</div>
+            <h2>Выберите своё направление</h2>
+            <p>При заказе вы указываете желаемое направление, и я подбираю соответствующее цветовое исполнение.</p>
+        </div>
+        <div class="directions">
+            <div class="direction-card reveal delay1"><div class="icon">💖</div><h3>Любовь и гармония</h3></div>
+            <div class="direction-card reveal delay2"><div class="icon">💰</div><h3>Финансы и изобилие</h3></div>
+            <div class="direction-card reveal delay3"><div class="icon">🍀</div><h3>Удача и новые возможности</h3></div>
+            <div class="direction-card reveal delay4"><div class="icon">✨</div><h3>Защита и спокойствие</h3></div>
+        </div>
+    </div>
+</section>
+
+<section class="expert-section">
+    <div class="container expert-grid">
+        <div class="expert-image reveal">
+            <img src="https://images.unsplash.com/photo-1590422749897-477c8a621b84?q=80&w=1000&auto=format&fit=crop" alt="Практикующий таролог">
+        </div>
+        <div class="expert-copy reveal delay1">
+            <h2>Персональная экспертиза</h2>
+            <p>Все персональные предсказания готовит практикующий таролог и аналитик с опытом работы с картами Таро и разборами более 2 лет. Вы получаете не просто аксессуар, а глубокий и персонализированный посыл.</p>
+        </div>
+    </div>
+</section>
+
+<section id="pricing" class="pricing-section">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="kicker">Варианты и цены</div>
+            <h2>Выберите свой комплект</h2>
+        </div>
+        <div class="pricing-grid">
+            <div class="price-card reveal delay1">
+                <h3>Только Талисман</h3>
+                <p class="price-sub">в подарочной упаковке</p>
+                <div class="price">250 ₽</div>
+                <ul>
+                    <li>Брелок-талисман ручной работы</li>
+                    <li>Подарочная коробочка и красная тишью</li>
+                    <li>Карточка с персональным предсказанием</li>
+                    <li>Готовое решение для подарка</li>
+                </ul>
+                <a class="cta" href="https://vk.ru/annarazbor" target="_blank" rel="noopener">Заказать</a>
+            </div>
+            <div class="price-card premium reveal delay2">
+                <h3>Комплект «Талисман + Личный Разбор»</h3>
+                <p class="price-sub">максимальная ценность</p>
+                <div class="price">350 ₽</div>
+                <ul>
+                    <li>Всё, что входит в базовый комплект</li>
+                    <li><b>Плюс индивидуальный разбор на выбор:</b></li>
+                    <li>🃏 Таро-расклад под личный запрос</li>
+                    <li>✋ Экспресс-анализ по линии ладони</li>
+                    <li>👁️ Анализ по фото радужки глаза</li>
+                </ul>
+                <a class="cta" href="https://vk.ru/annarazbor" target="_blank" rel="noopener">Заказать комплект</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="faq-section">
+    <div class="container">
+        <div class="section-head reveal">
+            <div class="kicker">Вопросы и ответы</div>
+            <h2>Частые вопросы</h2>
+        </div>
+        <div class="faq reveal delay1">
+            <details>
+                <summary>Как сделать заказ?</summary>
+                <p>Нажмите на любую кнопку «Заказать» на этой странице — вы перейдёте в мой профиль ВКонтакте. Напишите мне личное сообщение: укажите направление, комплект и данные для доставки.</p>
+            </details>
+            <details>
+                <summary>Сколько времени ждать заказ?</summary>
+                <p>Так как каждый талисман создается вручную после заказа, на его изготовление требуется 2-3 дня. После этого мы сразу отправим его вам.</p>
+            </details>
+            <details>
+                <summary>Чем отличается личный разбор?</summary>
+                <p>Это индивидуальная консультация в текстовом формате. Вы выбираете один из трех методов (Таро, хиромантия, иридодиагностика) и задаете свой запрос. В ответ вы получаете развернутый анализ и рекомендации.</p>
+            </details>
+            <details>
+                <summary>Что делать, если я не знаю, какое направление выбрать?</summary>
+                <p>Ничего страшного! Напишите мне в личные сообщения ВКонтакте ваш основной запрос (например, «хочу больше денег» или «ищу любовь»), и я помогу подобрать подходящее направление и цветовое сочетание.</p>
+            </details>
+        </div>
+    </div>
+</section>
+
+<section class="final">
+    <div class="container reveal">
+        <h2>Создайте свой материальный якорь для целей и настроя</h2>
+        <p>Эстетичный, смысловой и готовый к вручению подарок для себя или близкого человека.</p>
+        <a class="cta" href="https://vk.ru/annarazbor" target="_blank" rel="noopener" style="margin-top: 40px;">Создать свой талисман</a>
+    </div>
+</section>
+
+<footer>
+    <div class="container footer-row">
+        <div>© AnnaStory, 2024. Ручная работа.</div>
+        <div>Связаться: <a href="https://vk.ru/annarazbor" target="_blank" rel="noopener">ВКонтакте</a></div>
+    </div>
+</footer>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const revealElements = document.querySelectorAll('.reveal');
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+    });
+    revealElements.forEach(el => revealObserver.observe(el));
+});
+</script>
+</body>
+</html>
