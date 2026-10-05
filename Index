@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="AnnaStory — брелок-талисман ручной работы. Эстетичный подарок с личным смыслом и персональным предсказанием. Выберите направление и создайте свой талисман.">
+<title>AnnaStory — Талисман, созданный для тебя</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap');
+:root{--ink:#242036;--muted:#706b7e;--line:rgba(54,47,73,.13);--shadow:0 25px 70px rgba(38,31,57,.12);--accent:#7566a5;--accent-2:#9c8bdc}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;color:#242036;font-family:Manrope,Arial,sans-serif;line-height:1.65;background:linear-gradient(135deg,#f7f5fb 0%,#ececf7 48%,#f8f7fb 100%);overflow-x:hidden}
+body:before,body:after{content:"";position:fixed;pointer-events:none;z-index:-2;filter:blur(30px);border-radius:50%}
+body:before{width:520px;height:520px;left:-220px;top:8vh;background:rgba(111,102,165,.13);animation:orb 18s ease-in-out infinite alternate}
+body:after{width:500px;height:500px;right:-220px;top:52vh;background:rgba(91,121,169,.10);animation:orb 22s ease-in-out infinite alternate-reverse}
+@keyframes orb{to{transform:translate(70px,80px) scale(1.12)}}
+a{color:inherit;text-decoration:none}.container{width:min(1160px,calc(100% - 34px));margin:auto}
+section{padding:105px 0;position:relative}
+h1,h2,h3{font-family:"Cormorant Garamond",serif;font-weight:600;line-height:1.05;margin:0}
+h1{font-size:clamp(54px,8vw,94px);letter-spacing:-.035em}
+h2{font-size:clamp(42px,6vw,68px);letter-spacing:-.025em;text-align:center}
+h3{font-size:30px}
+p{margin:0}.kicker{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#7566a5;font-weight:700;text-align:center;display:block;margin-bottom:1rem}
+.section-head{max-width:760px;margin:0 auto 60px;text-align:center}
+.section-head p{color:var(--muted);font-size:17px;margin-top:16px}
+.hero{min-height:820px;display:flex;align-items:center;padding:70px 0 100px;overflow:hidden}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:65px;align-items:center}
+.hero-copy{position:relative;z-index:2}
+.hero h1{margin:18px 0 24px;max-width:760px}
+.hero h1 em{font-style:normal;background:linear-gradient(90deg,#62547f,#657da6,#7a698c);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{font-size:18px;color:var(--muted);max-width:650px}
+.hero-note{margin-top:22px;display:flex;gap:10px;align-items:center;color:#655b7f;font-size:13px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--accent-2);box-shadow:0 0 18px var(--accent-2); flex-shrink: 0;}
+.cta{display:inline-flex;align-items:center;justify-content:center;margin-top:32px;padding:16px 25px;border-radius:999px;background:linear-gradient(135deg,#62547f,#7189b3);color:white;font-weight:700;box-shadow:0 16px 35px rgba(67,57,91,.24);transition:.35s;position:relative;overflow:hidden; border: none; cursor: pointer; font-family: Manrope, sans-serif; font-size: 16px;}
+.cta:after{content:"";position:absolute;inset:-30%;background:linear-gradient(110deg,transparent 40%,rgba(255,255,255,.38) 50%,transparent 60%);transform:translateX(-80%);animation:sheen 4.5s infinite}
+@keyframes sheen{45%,100%{transform:translateX(80%)}}
+.cta:hover{transform:translateY(-4px);box-shadow:0 22px 45px rgba(113,92,176,.35)}
+.cta.secondary {
+    background: rgba(255,255,255,.8);
+    color: #62547f;
+    box-shadow: 0 8px 25px rgba(67,57,91,.1);
+    border: 1px solid var(--line);
+}
+.cta.secondary:hover {
+    background: #ffffff;
+    box-shadow: 0 16px 35px rgba(113,92,176,.15);
+}
+.hero-photo{position:relative;min-height:610px;display:flex;align-items:center;justify-content:center}
+.hero-photo .halo{position:absolute;width:530px;height:530px;border-radius:50%;background:radial-gradient(circle,rgba(167,145,232,.35),rgba(158,187,232,.15) 45%,transparent 70%);animation:pulse 6s ease-in-out infinite}
+@keyframes pulse{50%{transform:scale(1.08);opacity:.75}}
+.photo-frame{position:relative;width:min(470px,92%);transform:rotate(2deg);padding:13px;border-radius:28px;background:rgba(255,255,255,.68);box-shadow:var(--shadow);animation:float 7s ease-in-out infinite}
+@keyframes float{50%{transform:rotate(-1deg) translateY(-12px)}}
+.photo-frame img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:19px}
+.photo-caption{position:absolute;left:-28px;bottom:35px;background:rgba(255,255,255,.88);backdrop-filter:blur(15px);padding:15px 19px;border-radius:16px;box-shadow:0 15px 40px rgba(70,54,120,.15);font-family:"Cormorant Garamond";font-size:23px}
+.package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+.package-item .icon {
+    font-size: 40px;
+    margin-bottom: 15px;
+    display: inline-block;
+    background: linear-gradient(135deg, #9c8bdc, #7189b3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+.package-item h3 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+.package-item p {
+    color: var(--muted);
+    font-size: 15px;
+}
+.directions {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+.direction-card {
+    background: rgba(255,255,255,.66);
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: .45s;
+}
+.direction-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 32px 80px rgba(73,55,125,.22);
+}
+.direction-card .icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+.direction-card h3 {
+    font-size: 26px;
+}
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 50px auto 0;
+}
+.price-card {
+    background: rgba(255,255,255,.72);
+    border: 1px solid rgba(113,95,165,.2);
+    border-radius: 34px;
+    padding: 40px;
+    box-shadow: var(--shadow);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.price-card:before {
+    content: "";
+    position: absolute;
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    right: -100px;
+    top: -100px;
+    background: rgba(163,145,228,.22);
+    filter: blur(5px);
+}
+.price-card h3 { font-size: 34px; margin-bottom: 10px; }
+.price-card .price {
+    font-family: "Cormorant Garamond";
+    font-size: 58px;
+    color: #62509c;
+    margin: 10px 0;
+    font-weight: 600;
+}
+.price-card .price-sub { color: var(--muted); margin-bottom: 25px; }
+.price-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    flex-grow: 1;
+}
+.price-card li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--line);
+    color: #5d5673;
+    display: flex;
+    align-items: flex-start;
+}
+.price-card li:before {
+    content: '✓';
+    color: var(--accent-2);
+    margin-right: 12px;
+    font-weight: bold;
+    flex-shrink: 0;
+}
+.price-card .cta {
+    margin-top: 30px;
+    align-self: center;
+}
+.price-card.premium {
+    border-color: var(--accent-2);
+}
+.expert-section {
+    background: rgba(255,255,255,.45);
+}
+.expert-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 60px;
+    align-items: center;
+}
+.expert-image img {
+    width: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    border
